@@ -19,3 +19,16 @@ quantitatively reason with them.
 Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
+
+### Analysis
+
+Instead of looking at the probability of median of three working, lets look at the probability of it not working. 
+
+When more than one of H (high values) or more than one of L (low values) are chosen, even if one of the values is M (mid, aka the one we want), the median value will not be M (if there exists an M in the choice of 3, if there is no M in the choice of 3, the value picked can't be M anyway.) 
+
+Therefore the odds of picking a bad pivot using this method denoted B is 
+
+$B = (\frac{1}{4})^2 + (\frac{1}{4})^2 = \frac{1}{16} + \frac{1}{16} = \frac{1}{8}$.   Meaning that the odds that the pivot is good is: $G = 1 - \frac{1}{8} = \frac{7}{8} > \frac{1}{2}$ So median of 3 is far better than picking at random.
+
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
+
