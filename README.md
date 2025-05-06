@@ -24,13 +24,15 @@ might help with the notation for mathematical expressions.
 
 Instead of looking at the probability of median of three working, lets look at the probability of it not working. 
 
-When more than one of H (high values) or more than one of L (low values) are chosen, even if one of the values is M (mid, aka the one we want), the median value will not be M (if there exists an M in the choice of 3, if there is no M in the choice of 3, the value picked can't be M anyway.)
+Let L be the odds of picking a Low (1/4), M for mid aka good (1/2), and H for high (1/4). $B_L$ for Bad pivot combo with 2 or more lows and $B_H$ for bad pivot combo with two or more highs.
 
-For L and H there are 3 ways for there to be two of them. For two Ls and one M. LLM, LML, MLL. Same applies for H. Therefore we multiply the probablity of two Ls by 3
+$B_L = LLL+LLH+LHL+HHL+LLM+LML+MML = \frac{5}{32}$
 
-Therefore the odds of picking a bad pivot using this method denoted B is 
+$B_H = HHH+HHL+HLH+LHH+HHM+HMH+MHH = \frac{5}{32}$
 
-$B = 3\cdot (\frac{1}{4})^2 + 3 \cdot (\frac{1}{4})^2 = 3\cdot(\frac{1}{16} + \frac{1}{16}) = 3\cdot\frac{1}{8}$.   Meaning that the odds that the pivot is good is: $G = 1 - \frac{3}{8} = \frac{5}{8} > \frac{1}{2}$ So median of 3 is better than picking at random.
+$B = B_L + B_H = \frac{5}{32} + \frac{5}{32} = \frac{10}{32} = \frac{5}{16}$
+
+Probablity of good pivot = $1 - \frac{5}{16} = \frac{11}{16}$
 
 I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
 
